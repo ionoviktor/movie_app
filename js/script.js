@@ -55,7 +55,7 @@ function showMovies(movies) {
                         ${movie.genres.map(genre => genre.genre).join(', ')}
                     </div>
                     <div class="movie__average movie__average-${getClassByRate(movie.ratingKinopoisk || movie.ratingImdb || movie.rating)}">
-                        ${movie.ratingKinopoisk || movie.ratingImdb || movie.rating || ''}
+                        ${(movie.ratingKinopoisk || movie.ratingImdb || movie.rating) || ''}
                     </div>
                 </div>
             `;

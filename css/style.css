@@ -2,6 +2,7 @@
 body {
     font-family: "Open Sans", sans-serif;
     background-color: #1a191f;
+    position: relative;
 }
 
 * {
@@ -16,7 +17,7 @@ body {
 }
 
 .header {
-    padding: 30px 30px;
+    padding: 30px 30px 0 30px;
 }
 
 .header__content {
@@ -43,7 +44,7 @@ body {
 }
 
 .movies {
-    padding: 0 30px;
+    padding: 30px 30px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -143,4 +144,94 @@ body {
 
 .movie__average-red {
     border: 1px solid red;
+}
+
+.modal {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+}
+
+.modal__window {
+    padding: 15px;
+    width: 100vh;
+    height: 80vh;
+    border-radius: 10px;
+    position: fixed;
+    display: block;
+    background: linear-gradient(135deg, #384261 0%, #2a2b2e 100%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+.modal__close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.modal__cover {
+    display: block;
+    margin: 20px auto;
+    width: 250px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.modal__title {
+    text-align: center;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #e94560;
+    margin: 10px 0;
+}
+
+.modal__info {
+    list-style: none;
+    padding: 15px 30px;
+    margin: 25px 100px;
+    background: rgba(255,255,255,0.05);
+    border-left: 3px solid #e94560;
+    border-radius: 5px;
+}
+
+.modal__ganre {
+    font-weight: bold;
+    color: #ffd80e;
+}
+
+.modal__website {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.modal__website a {
+    color: #4cc9f0;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.modal__website a:hover {
+    color: #4895ef;
+    text-decoration: underline;
+}
+
+.modal__overview {
+    margin-top: 10px;
+    color: #fff;
 }
